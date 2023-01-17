@@ -6,11 +6,13 @@ Created on Mon Jan 16 17:28:03 2023
 @author: daxedlufy
 """
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
-xmin = -13.0
-xmax = 13.0
+# xmin = -13.0
+# xmax = 13.0
 #nbr_division = 800000
+xmin = 892
+xmax = 1108
 nbr_division = int(input('Enter the number of Divisions: '))
 
 psi_1 = 1e-5
@@ -62,11 +64,12 @@ iteration = 0
 while(end):
 
     wavefn = psi(psi_1, Etry)
-    E_found.append(Etry)
+    
     
     for i in range(len(E_harmonic)):
         if abs(E_harmonic[i] - Etry) <= Error:
             print("Efound",Etry)
+            E_found.append(Etry)
         
     print(iteration)
     if abs(wavefn[-1][1]) < eps:
