@@ -13,12 +13,14 @@ import matplotlib.pyplot as plt
 #nbr_division = 800000
 xmin = 892
 xmax = 1108
+
+#perfect value = 1500
 nbr_division = int(input('Enter the number of Divisions: '))
 
 psi_1 = 1e-5
 eps = 1e-3
 Etry = 2
-Error = 0.15625
+Error = 0.0075
 
 E_found = []
 
